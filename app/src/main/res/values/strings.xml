@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">StartNGKotlinTask2</string>
+    <string name="api_key">INSERT API KEY</string>
+    <string name="todo" />
+</resources>
