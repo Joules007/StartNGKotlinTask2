@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         arrayList.add(DataModel("Calvin Klein Shirt", "This is the shirt description", R.drawable.image1))
         arrayList.add(DataModel("Escada Perfume", "This is the perfume description", R.drawable.image2))
         arrayList.add(DataModel("Levi's Jeans for Ladies", "This is the jeans description", R.drawable.image3))
-        arrayList.add(DataModel("Adidas Yeezy Boost 700 Wave Runner", "This is the shoe description", R.drawable.image4))
+        arrayList.add(DataModel("Adidas Yeezy Boost 700", "This is the shoe description", R.drawable.image4))
         arrayList.add(DataModel("H&M Joggers", "This is the joggers description", R.drawable.image5))
         arrayList.add(DataModel("Hugo Boss Perfume", "This is the perfume description", R.drawable.image6))
         arrayList.add(DataModel("Adidas Running Shoes ", "This is the shoes description", R.drawable.image7))

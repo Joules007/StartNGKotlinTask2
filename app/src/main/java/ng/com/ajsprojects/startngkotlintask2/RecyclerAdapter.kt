@@ -1,10 +1,10 @@
 package ng.com.ajsprojects.startngkotlintask2
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.row.view.*
 
@@ -34,7 +34,7 @@ class RecyclerAdapter(val arrayList: ArrayList<DataModel>, val context: Context)
         holder.bindItems(arrayList[position])
 
         holder.itemView.setOnClickListener{
-            if(position == 0){
+            /*if(position == 0){
                 Toast.makeText(context, "You clicked over Calvin Klein Shirt", Toast.LENGTH_LONG).show()
             }
             if(position == 1){
@@ -78,7 +78,33 @@ class RecyclerAdapter(val arrayList: ArrayList<DataModel>, val context: Context)
             }
             if(position == 14){
                 Toast.makeText(context, "You clicked over Calvin Klein Shirt", Toast.LENGTH_LONG).show()
-            }
+            }*/
+
+            //get position of selected item
+            val dataModel = arrayList.get(position)
+
+            // get item title and description of selected item with intent
+            var gTitle: String = dataModel.title
+
+            var gDescription: String = dataModel.des
+
+            //getting image with intent for the item thar is selected
+
+            var gImageView: Int = dataModel.image
+
+            //Using intent
+
+            val intent = Intent(context, ItemActivity::class.java)
+
+            //putting items in putExtra
+            intent.putExtra("iTitle", gTitle)
+            intent.putExtra("iDescription", gDescription)
+            intent.putExtra("iImageView", gImageView)
+
+            //Starting another activity
+            context.startActivity(intent)
+
+
         }
     }
 }
